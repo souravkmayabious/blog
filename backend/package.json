@@ -8,7 +8,7 @@
       "server": "node server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Sourav Karmakar",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
