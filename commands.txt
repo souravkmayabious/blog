@@ -1,0 +1,21 @@
+npm init -y
+md backend
+md frontend
+
+cd backend 
+npm init -y
+npm install express cors dotenv
+
+
+cd..
+npx create-react-app frontend
+
+cd..
+npm install concurrently
+
+
+"scripts": {
+  "start": "concurrently \"node server.js\" \"npm start --prefix frontend\"",
+  "server": "node server.js",
+  "client": "npm start --prefix frontend
+}
