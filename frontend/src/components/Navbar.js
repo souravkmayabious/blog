@@ -52,22 +52,22 @@ export default function Navbar() {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/sdsfdf">
+                <Link className="nav-link" to="/recent">
                   Recent
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/sdsfdf">
+                <Link className="nav-link" to="/category">
                   Category
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/sdsfdf">
+                <Link className="nav-link" to="/about">
                   About
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/sdsfdf">
+                <Link className="nav-link" to="/contactus">
                   Contact
                 </Link>
               </li>

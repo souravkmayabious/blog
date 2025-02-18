@@ -11,6 +11,9 @@ import Login from "../auth/Login";
 import Register from "../auth/Register";
 import Forgot from "../auth/Forgot";
 import Footer from "../components/Footer";
+import Category from "../pages/Category";
+import Recent from "../pages/Recent";
+import Contact from "../pages/Contact";
 
 const RoutesComponent = () => {
   const location = useLocation();
@@ -41,6 +44,9 @@ const RoutesComponent = () => {
         <Route path="/" element={<App />} />
         <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/category" element={<Category />} />
+        <Route path="/recent" element={<Recent /> } />
+        <Route path="/contactus" element={<Contact /> } />
 
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Register />} />

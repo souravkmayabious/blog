@@ -1,12 +1,18 @@
+.navbar-brand{
+    color: var( --primary-color) !important;
+    font-size: 20px !important;
+    font-weight: bold;
+}
 .nav-link {
-    color: brown !important;
+    color: var( --link-color) !important;
     font-size: 16px !important;
-    font-family: Crimson;
+    /* font-family: Crimson; */
     text-decoration: none;
     transition: all 0.4s ease-in-out;
     padding: 5px 10px;
     position: relative;
     display: inline-block;
+    font-weight: 500;
 }
 
 .nav-link::after {
@@ -16,7 +22,7 @@
     bottom: 0;
     width: 100%;
     height: 2px;
-    background-color: brown;
+    background-color: var(--link-color);
     transform: scaleX(0);
     transform-origin: center;
     transition: transform 0.4s ease-in-out, height 0.4s ease-in-out;
@@ -28,6 +34,6 @@
 }
 
 .nav-link:hover {
-    color: darkred !important;
+    color: var( --link-color-hover)!important;
     transform: scale(1.05);
 }
