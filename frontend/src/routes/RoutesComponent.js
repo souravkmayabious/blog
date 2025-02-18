@@ -48,8 +48,12 @@ const RoutesComponent = () => {
 
         <Route path="*" element={<NotFound />} />
       </Routes>
-      <Footer />
-      <ToastContainer />
+       {!hideNavbar && <Footer />}
+      <ToastContainer
+        autoClose={3000}
+        newestOnTop={true}
+        pauseOnHover={false}
+      />
     </>
   );
 };

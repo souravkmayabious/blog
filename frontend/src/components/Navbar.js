@@ -27,7 +27,7 @@ export default function Navbar() {
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/home">
-            Navbar
+          VibeNest
           </Link>
           <button
             className="navbar-toggler"
@@ -53,7 +53,22 @@ export default function Navbar() {
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/sdsfdf">
-                  Link
+                  Recent
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/sdsfdf">
+                  Category
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/sdsfdf">
+                  About
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/sdsfdf">
+                  Contact
                 </Link>
               </li>
               <li className="nav-item dropdown">

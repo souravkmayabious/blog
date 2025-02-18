@@ -1,41 +1,82 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
+import axios from "axios";
 
 function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    if (!email || !password) {
+      toast.warning("All fields are required");
+      return;
+    }
+    try {
+      const response = await axios.post(
+        process.env.REACT_APP_API_URL + "/signup",
+        {
+          email,
+          password,
+        }
+      );
+      if (response.data.success) {
+        toast.success("Login successful");
+      } else {
+        toast.error(response.data.message || "Login failed");
+      }
+    } catch (error) {
+      toast.error("Error in login : " + error);
+    }
+  };
+
   return (
-    <div class="container col-xl-10 col-xxl-8 px-4 py-5">
-      <div class="row align-items-center g-lg-5 py-5">
-        <div class="col-lg-7 text-center text-lg-start">
-          <h1 class="display-4 fw-bold lh-1 mb-3">@norven</h1>
-          <p class="col-lg-10 fs-4">CodePen Platform, Always Free! 🙌</p>
+    <div className="container col-xl-10 col-xxl-8 px-4 py-5">
+      <div className="row align-items-center g-lg-5 py-5">
+        <div className="col-lg-7 text-center text-lg-start">
+          <h1 className="display-4 fw-bold lh-1 mb-3">@VibeNest</h1>
+          <p className="col-lg-10 fs-4">This Platform, Always Free! 🙌</p>
         </div>
-        <div class="col-md-10 mx-auto col-lg-5">
-          <form class="p-4 p-md-5 border rounded-3 bg-light">
-            <div class="form-floating mb-3">
+        <div className="col-md-10 mx-auto col-lg-5">
+          <form className="p-4 p-md-5 border rounded-3 bg-light" autoComplete="off">
+            <div className="form-floating mb-3">
               <input
                 type="email"
-                class="form-control"
+                name="email"
+                className="form-control"
                 id="floatingInput"
                 placeholder="name@example.com"
+                onChange={(e) => setEmail(e.target.value)}
               />
-              <label for="floatingInput">Username</label>
+              <label htmlFor="floatingInput">Email</label>
             </div>
-            <div class="form-floating mb-3">
+            <div className="form-floating mb-3">
               <input
                 type="password"
-                class="form-control"
+                name="password"
+                className="form-control"
                 id="floatingPassword"
                 placeholder="Password"
+                onChange={(e) => setPassword(e.target.value)}
               />
-              <label for="floatingPassword">Password</label>
+              <label htmlFor="floatingPassword">Password</label>
             </div>
-            <button class="w-100 btn btn-lg btn-primary" type="submit">
+            <button
+              className="w-100 btn btn-lg btn-primary"
+              type="submit"
+              onClick={handleLogin}
+            >
               Login
             </button>
-            <hr class="my-4" />
-            <small class="text-muted">
-              <p className="m-0 p-0 mt-2"><Link to={'/signup'}>New here ? Signup now its free</Link></p>
-              <p className="m-0 p-0 mt-2"><Link to={'/signup'}>Forgot password ? Reset now</Link></p>
+            <hr className="my-4" />
+            <small className="text-muted">
+              <p className="m-0 p-0 mt-2">
+                <Link to={"/signup"}>New here ? Signup now its free</Link>
+              </p>
+              <p className="m-0 p-0 mt-2">
+                <Link to={"/forgot"}>Forgot password ? Reset now</Link>
+              </p>
             </small>
           </form>
         </div>
