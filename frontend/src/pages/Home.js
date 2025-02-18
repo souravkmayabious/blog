@@ -47,8 +47,7 @@ export default function Home() {
         </div>
       </div>
 
-      <p>Home page</p>
-      <p style={{ fontFamily: "Playwrite NZ Guides" }}>
+      <p className="text-center" style={{ fontFamily: "Playwrite NZ Guides" }}>
         This is a sample home page. It uses the layout component to render the
         navbar and other common components.
       </p>

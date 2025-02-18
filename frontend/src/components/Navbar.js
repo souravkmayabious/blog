@@ -1,8 +1,27 @@
-import React from "react";
+import React , {useEffect,useState} from "react";
 import { Link } from "react-router";
+import { toast } from 'react-toastify';
+
 import "./navbar.css";
 
 export default function Navbar() {
+  
+  const [theme , setTheme] = useState('light');
+    
+    useEffect(() => {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+        setTheme(savedTheme);
+      }
+    }, []);
+
+    // Toggle theme
+    const toggleTheme = (selectedTheme) => {
+      setTheme(selectedTheme);
+      localStorage.setItem('theme', selectedTheme); // Save the selected theme in localStorage
+      toast('Seleted Theme : '+selectedTheme);
+    };
+
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -49,12 +68,12 @@ export default function Navbar() {
                 </Link>
                 <ul className="dropdown-menu text-center">
                   <li>
-                    <Link className="dropdown-item" href="#">
+                    <Link className="dropdown-item" href="#"  onClick={() => toggleTheme('light')}>
                       <i className="fa-solid fa-sun"></i> Day
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" href="#">
+                    <Link className="dropdown-item" href="#"  onClick={() => toggleTheme('dark')}>
                       <i className="fa-solid fa-moon"></i> Night
                     </Link>
                   </li>
