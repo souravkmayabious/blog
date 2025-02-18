@@ -87,8 +87,8 @@ export default function Navbar() {
                 placeholder="Search"
                 aria-label="Search"
               />
-              <button className="btn btn-outline-success" type="submit">
-              <i className="fa-brands fa-searchengin"></i>
+              <button className="btn btn-outline-secondary" type="submit">
+              <i className="fa-solid fa-magnifying-glass"></i>
               </button>
             </form>
             <Link className="nav-link mx-2" to="/login">

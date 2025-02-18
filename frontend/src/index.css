@@ -53,3 +53,11 @@ footer{
   left: 0;
   overflow-x: hidden;
 }
+
+a{
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: none;
+}

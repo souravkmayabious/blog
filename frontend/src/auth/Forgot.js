@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function Register() {
+export default function Forgot() {
   return (
     <div class="container col-xl-10 col-xxl-8 px-4 py-5">
     <div class="row align-items-center g-lg-5 py-5">
@@ -16,38 +16,16 @@ function Register() {
               type="email"
               class="form-control"
               id="floatingInput"
-              placeholder="Your name"
-            />
-            <label for="floatingInput">User name</label>
-          </div>
-          <div class="form-floating mb-3">
-            <input
-              type="email"
-              class="form-control"
-              id="floatingInput"
               placeholder="name@example.com"
             />
             <label for="floatingInput">Email</label>
           </div>
-          <div class="form-floating mb-3">
-            <input
-              type="password"
-              class="form-control"
-              id="floatingPassword"
-              placeholder="Password"
-            />
-            <label for="floatingPassword">Password</label>
-          </div>
           <button class="w-100 btn btn-lg btn-primary" type="submit">
-            Signup
+            Forgot
           </button>
           <hr class="my-4" />
           <small class="text-muted">
-            <center>
-              Every user who becomes a member accepts the <i>terms</i>{" "}
-              agreement.
-            </center>
-            <p className="m-0 p-0 mt-2"><Link to={'/login'}>Back to ? Login</Link></p>
+              <p className="m-0 p-0 mt-2"><Link to={'/login'}>Back to ? Login</Link></p>
           </small>
         </form>
       </div>
@@ -55,5 +33,3 @@ function Register() {
   </div>
   )
 }
-
-export default Register
