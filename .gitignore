@@ -4,8 +4,8 @@
 #/node_modules
 *node_modules
 # Ignore environment files (API keys, database credentials, etc.)
-backend/.env
-frontend/.env
+# backend/.env
+# frontend/.env
 
 # Ignore build files
 frontend/build/
