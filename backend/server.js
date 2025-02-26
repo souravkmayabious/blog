@@ -17,7 +17,7 @@ app.get("/", (req, res) => {
 
 // Routes
 app.use("/api/auth", require("./src/routes/auth"));
-// app.use("/api/users", require("./routes/users"));
+app.use("/api/users", require("./src/routes/users"));
 // app.use("/api/posts", require("./routes/posts"));
 // app.use("/api/categories", require("./routes/categories"));
 

@@ -54,6 +54,6 @@ const User = sequelize.define(
 
 
 // `sequelize.define` also returns the model
-console.log(User === sequelize.models.User); // true
+//console.log(User === sequelize.models.User); // true
 
 module.exports = User;
