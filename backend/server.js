@@ -9,6 +9,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+require('dotenv').config();
+
 app.get("/", (req, res) => {
     res.send("Hello from Backend!");
 });

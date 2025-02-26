@@ -13,6 +13,7 @@ const User = sequelize.define(
     account_id: {
       type: DataTypes.STRING(100),
       allowNull: false,
+      unique: true,
     },
     username: {
       type: DataTypes.STRING(100),
