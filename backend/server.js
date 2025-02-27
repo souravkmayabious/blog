@@ -3,6 +3,9 @@ const express = require("express");
 const cors = require("cors");
 const {dbConnection} = require("./src/config/db");
 const  User  = require("./src/models/userModel");
+const  Post  = require("./src/models/postModel");
+const  Categorie  = require("./src/models/blogCategoryModel");
+const  Tags  = require("./src/models/tagsModel");
 
 
 const app = express();
@@ -23,11 +26,14 @@ app.get("/api", (req, res) => {
 // Routes
 app.use("/api/auth", require("./src/routes/auth"));
 app.use("/api/user", require("./src/routes/user"));
-// app.use("/api/posts", require("./routes/posts"));
+app.use("/api/posts", require("./src/routes/post"));
 // app.use("/api/categories", require("./routes/categories"));
 
 //sync database
-// User.sync();
+//  User.sync({ force: true });
+// Post.sync({ force: true });
+// Categorie.sync({ force: true });
+// Tags.sync({ force: true });
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
