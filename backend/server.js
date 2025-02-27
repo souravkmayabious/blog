@@ -30,7 +30,7 @@ app.use("/api/posts", require("./src/routes/post"));
 // app.use("/api/categories", require("./routes/categories"));
 
 //sync database
-//  User.sync({ force: true });
+// User.sync({ force: true });
 // Post.sync({ force: true });
 // Categorie.sync({ force: true });
 // Tags.sync({ force: true });
