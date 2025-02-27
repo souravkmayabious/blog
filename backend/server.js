@@ -26,7 +26,7 @@ app.get("/api", (req, res) => {
 // Routes
 app.use("/api/auth", require("./src/routes/auth"));
 app.use("/api/user", require("./src/routes/user"));
-app.use("/api/posts", require("./src/routes/post"));
+app.use("/api/post", require("./src/routes/post"));
 // app.use("/api/categories", require("./routes/categories"));
 
 //sync database

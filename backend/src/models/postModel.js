@@ -25,7 +25,7 @@ const Post = sequelize.define(
         allowNull: false,
     },
     slug:{
-        type: DataTypes.STRING(200),
+        type: DataTypes.STRING(224),
         allowNull: true,
         unique: true,
     },
@@ -45,6 +45,6 @@ const Post = sequelize.define(
   }
 );
 
-console.log(Post === sequelize.models.Post); 
+//console.log(Post === sequelize.models.Post); 
 
 module.exports = Post;
