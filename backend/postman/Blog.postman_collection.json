@@ -1,0 +1,519 @@
+{
+	"info": {
+		"_postman_id": "3b71fdce-ba4e-4bf3-bf76-cea5524bdffb",
+		"name": "Blog",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40992720"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"sourav\",\r\n    \"email\":\"sk2@gmail.com\",\r\n    \"password\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/auth/register",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"sk2@gmail.com\",\r\n    \"password\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Profile",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA4YjRjMWZlLTQyZDktNDJiMS04MWY2LTgyMTYxOWU2MTkyMSIsInVzZXJuYW1lIjoic291cmF2Iiwicm9sZSI6InN1YnNjcmliZXIiLCJpYXQiOjE3NDA2Mzg3NzcsImV4cCI6MTc0MDY0MjM3N30.nbt7-xCBbdbEzh25aF6ZJRRajeZ5MonuwAIHGceXqzY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/api/user/profile",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Profile update",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA4YjRjMWZlLTQyZDktNDJiMS04MWY2LTgyMTYxOWU2MTkyMSIsInVzZXJuYW1lIjoic291cmF2Iiwicm9sZSI6InN1YnNjcmliZXIiLCJpYXQiOjE3NDA2Mzg3NzcsImV4cCI6MTc0MDY0MjM3N30.nbt7-xCBbdbEzh25aF6ZJRRajeZ5MonuwAIHGceXqzY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"sourav 2\",\r\n    \"email\":\"sk2@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/user/profileUpdate",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user",
+								"profileUpdate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Password update",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA4YjRjMWZlLTQyZDktNDJiMS04MWY2LTgyMTYxOWU2MTkyMSIsInVzZXJuYW1lIjoic291cmF2Iiwicm9sZSI6InN1YnNjcmliZXIiLCJpYXQiOjE3NDA2Mzg3NzcsImV4cCI6MTc0MDY0MjM3N30.nbt7-xCBbdbEzh25aF6ZJRRajeZ5MonuwAIHGceXqzY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"oldPassword\":\"12345678\",\r\n   \"newPassword\":\"123456\",\r\n   \"confirmPassword\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/user/passwordUpdate",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user",
+								"passwordUpdate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "Add post",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjdkOGUzOWJjLTY1ZTQtNDhjZi05OWRiLTlkMjVlM2QyYjgxOSIsInVzZXJuYW1lIjoic291cmF2IDEiLCJyb2xlIjoic3Vic2NyaWJlciIsImlhdCI6MTc0MDY2NTQ3NCwiZXhwIjoxNzQwNjY5MDc0fQ.n6yIRK7gYCt7RcMWoR_qNbs_lxXvdP713OQHrL3Z_ws",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"This is the first post\",\r\n    \"body\":\"Lorem IpsumNeque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain...What is Lorem Ipsum?Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/post/add",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"post",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View all posts",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjdkOGUzOWJjLTY1ZTQtNDhjZi05OWRiLTlkMjVlM2QyYjgxOSIsInVzZXJuYW1lIjoic291cmF2IDEiLCJyb2xlIjoic3Vic2NyaWJlciIsImlhdCI6MTc0MDcyMDA2OCwiZXhwIjoxNzQwNzIzNjY4fQ.rx7peiNIQfINZYcAbIm9JQ_1_M2-eRjjOLwibVsorZA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"This is the first post\",\r\n    \"body\":\"Lorem IpsumNeque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain...What is Lorem Ipsum?Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/post/view-all",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"post",
+								"view-all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View single post",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjdkOGUzOWJjLTY1ZTQtNDhjZi05OWRiLTlkMjVlM2QyYjgxOSIsInVzZXJuYW1lIjoic291cmF2IDEiLCJyb2xlIjoic3Vic2NyaWJlciIsImlhdCI6MTc0MDcyNDA2OCwiZXhwIjoxNzQwODEwNDY4fQ.qReKsYUAEgkfZkRaa6I0wk1qAJ394xjWti7MRmA4vow",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"This is the first post\",\r\n    \"body\":\"Lorem IpsumNeque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain...What is Lorem Ipsum?Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/post/view/1",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"post",
+								"view",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "My posts",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjdkOGUzOWJjLTY1ZTQtNDhjZi05OWRiLTlkMjVlM2QyYjgxOSIsInVzZXJuYW1lIjoic291cmF2IDEiLCJyb2xlIjoic3Vic2NyaWJlciIsImlhdCI6MTc0MDc0OTk3MCwiZXhwIjoxNzQwODM2MzcwfQ.2fJZ8wQO-AcV724aESonBGB8F-EubokruK5CYvpIp68",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"This is the first post\",\r\n    \"body\":\"Lorem IpsumNeque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain...What is Lorem Ipsum?Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/post/my-posts",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"post",
+								"my-posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit post",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjdkOGUzOWJjLTY1ZTQtNDhjZi05OWRiLTlkMjVlM2QyYjgxOSIsInVzZXJuYW1lIjoic291cmF2IDEiLCJyb2xlIjoic3Vic2NyaWJlciIsImlhdCI6MTc0MDcyNDA2OCwiZXhwIjoxNzQwODEwNDY4fQ.qReKsYUAEgkfZkRaa6I0wk1qAJ394xjWti7MRmA4vow",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"1_This is the first post\",\r\n    \"body\":\"a11111111111111111111111\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/post/edit/1",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"post",
+								"edit",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change status of post",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjdkOGUzOWJjLTY1ZTQtNDhjZi05OWRiLTlkMjVlM2QyYjgxOSIsInVzZXJuYW1lIjoic291cmF2IDEiLCJyb2xlIjoic3Vic2NyaWJlciIsImlhdCI6MTc0MDcyNDA2OCwiZXhwIjoxNzQwODEwNDY4fQ.qReKsYUAEgkfZkRaa6I0wk1qAJ394xjWti7MRmA4vow",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/post/change-status/1?status=published",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"post",
+								"change-status",
+								"1"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "published"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete post",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjdkOGUzOWJjLTY1ZTQtNDhjZi05OWRiLTlkMjVlM2QyYjgxOSIsInVzZXJuYW1lIjoic291cmF2IDEiLCJyb2xlIjoic3Vic2NyaWJlciIsImlhdCI6MTc0MDcyNDA2OCwiZXhwIjoxNzQwODEwNDY4fQ.qReKsYUAEgkfZkRaa6I0wk1qAJ394xjWti7MRmA4vow",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/post/delete/2",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"post",
+								"delete",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Server End point",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000",
+					"host": [
+						"localhost"
+					],
+					"port": "5000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Server API End point",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api/",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
