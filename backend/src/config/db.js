@@ -1,9 +1,10 @@
 const { Sequelize } = require("sequelize");
 
-const sequelize = new Sequelize("blog_sequelize", "root", "", {
-  host: "localhost",
-  // port: 3306,
-  dialect: "mysql",
+const sequelize = new Sequelize(process.env.MYSQL_DATABSE, process.env.MYSQL_USER, process.env.MYSQL_PASSWORD, {
+  host: process.env.MYSQL_HOST,
+  // port: process.env.SEQUELIZE_PORT,
+  dialect: process.env.SEQUELIZE_DIALECT,
+  logging:process.env.SEQUELIZE_LOGGING === 'true' ? console.log : false   //show query which is executing
 });
 
 const dbConnection = async () => {
