@@ -19,6 +19,14 @@ const Category = sequelize.define(
         allowNull: false,
         unique: true,
     },
+    user_id:{
+      type: DataTypes.STRING(100),
+      allowNull: false,
+        references: {
+          model: 'users',   
+          key: 'account_id'
+      }
+    },
     status: {
       type: DataTypes.ENUM('active', 'inactive'),
       defaultValue: 'active',
