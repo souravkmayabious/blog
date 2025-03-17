@@ -28,7 +28,7 @@ app.use("/api/auth", require("./src/routes/auth"));
 app.use("/api/user", require("./src/routes/user"));
 app.use("/api/post", require("./src/routes/post"));
 app.use("/api/category", require("./src/routes/category"));
-
+app.use("/api/tags", require("./src/routes/tags"));
 
 app.use('*',(req,res) => {
     res.status(404).json({status:'Fail',message:'Route not found'})
