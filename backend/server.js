@@ -27,7 +27,12 @@ app.get("/api", (req, res) => {
 app.use("/api/auth", require("./src/routes/auth"));
 app.use("/api/user", require("./src/routes/user"));
 app.use("/api/post", require("./src/routes/post"));
-// app.use("/api/categories", require("./routes/categories"));
+app.use("/api/category", require("./src/routes/category"));
+
+
+app.use('*',(req,res) => {
+    res.status(404).json({status:'Fail',message:'Route not found'})
+});
 
 //sync database
 // User.sync({ force: true });
