@@ -8,6 +8,8 @@ function verifyToken(req,res,next) {
     try{
         const decoded = jwt.verify(token,process.env.JWT_SECRET);
         req.account_id = decoded.id;
+        req.name = decoded.name;
+        req.role = decoded.role;
         next();
     }catch(e){
         res.status(401).json({ success: false, message: 'Invalid token' });
