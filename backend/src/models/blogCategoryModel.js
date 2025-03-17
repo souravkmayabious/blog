@@ -1,7 +1,7 @@
 const { DataTypes } = require('sequelize');
 const {sequelize} = require('../config/db');
 
-const Categorie = sequelize.define(
+const Category = sequelize.define(
   'categories',
   {
     category_id:{
@@ -18,7 +18,12 @@ const Categorie = sequelize.define(
         type: DataTypes.STRING(200),
         allowNull: false,
         unique: true,
-    }
+    },
+    status: {
+      type: DataTypes.ENUM('active', 'inactive'),
+      defaultValue: 'active',
+      allowNull: true,
+    },
   }, {
     tableName: 'categories', 
     timestamps: true,  
@@ -26,4 +31,4 @@ const Categorie = sequelize.define(
   }
 );
 
-module.exports = Categorie;
+module.exports = Category;

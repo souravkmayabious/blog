@@ -18,7 +18,12 @@ const Tags = sequelize.define(
         type: DataTypes.STRING(200),
         allowNull: false,
         unique: true,
-    }
+    },
+    status: {
+      type: DataTypes.ENUM('active', 'inactive'),
+      defaultValue: 'active',
+      allowNull: true,
+    },
   }, {
     tableName: 'tags', 
     timestamps: true,  
