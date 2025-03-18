@@ -1,5 +1,5 @@
 const  slugify = require('slugify');
-const  Category  = require("../models/blogCategoryModel");
+const  Category  = require("../models/categoryModel");
 
 //Add Category
 const addCategory = async (req, res) => {
@@ -42,7 +42,7 @@ const viewCategory = async (req, res) => {
 const viewAllCategory = async (req, res) => {
     try{
         const category = await Category.findAll();
-        return res.status(400).json({message: "All category",data:category, success: true});
+        return res.status(200).json({message: "All category",data:category, success: true});
     }catch(err){
         return res.status(400).json({message: "Failed to fetch : "+err, success: false});
     }

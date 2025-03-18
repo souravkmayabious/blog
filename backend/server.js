@@ -4,7 +4,7 @@ const cors = require("cors");
 const {dbConnection} = require("./src/config/db");
 const  User  = require("./src/models/userModel");
 const  Post  = require("./src/models/postModel");
-const  Categorie  = require("./src/models/blogCategoryModel");
+const  Categorie  = require("./src/models/categoryModel");
 const  Tags  = require("./src/models/tagsModel");
 
 
