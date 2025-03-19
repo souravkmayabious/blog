@@ -2,7 +2,7 @@ const { DataTypes } = require('sequelize');
 const {sequelize} = require('../config/db');
 
 const PostCategories = sequelize.define(
-  'post_categories',
+  'PostCategories',
   {
     post_id:{
         type: DataTypes.INTEGER,

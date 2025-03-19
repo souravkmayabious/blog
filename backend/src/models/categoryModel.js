@@ -2,7 +2,7 @@ const { DataTypes } = require('sequelize');
 const {sequelize} = require('../config/db');
 
 const Category = sequelize.define(
-  'categories',
+  'category',
   {
     category_id:{
         type: DataTypes.INTEGER,
@@ -33,7 +33,7 @@ const Category = sequelize.define(
       allowNull: true,
     },
   }, {
-    tableName: 'categories', 
+    tableName: 'category', 
     timestamps: true,  
     underscored: true, 
   }

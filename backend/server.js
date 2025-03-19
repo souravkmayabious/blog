@@ -37,7 +37,7 @@ app.use('*',(req,res) => {
 });
 
 //sync database
-// User.sync({ force: true });
+// User.sync({ force: false });
 // Post.sync({ force: true });
 // Categorie.sync({ force: true });
 // Tags.sync({ force: true });
