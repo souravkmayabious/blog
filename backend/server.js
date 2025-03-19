@@ -6,6 +6,8 @@ const  User  = require("./src/models/userModel");
 const  Post  = require("./src/models/postModel");
 const  Categorie  = require("./src/models/categoryModel");
 const  Tags  = require("./src/models/tagsModel");
+const PostCategories = require("./src/models/postCategoriesModel");
+const PostTags = require("./src/models/postTagsModel");
 
 
 const app = express();
@@ -39,6 +41,8 @@ app.use('*',(req,res) => {
 // Post.sync({ force: true });
 // Categorie.sync({ force: true });
 // Tags.sync({ force: true });
+// PostCategories.sync({ force: true });
+// PostTags.sync({ force: true });
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
