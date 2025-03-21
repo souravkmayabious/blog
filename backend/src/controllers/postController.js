@@ -83,7 +83,7 @@ const viewPost = async (req, res) => {
 const viewAllPost = async (req, res) => {
     try{
         const posts = await Post.findAll();
-        return res.status(400).json({message: "All posts",data:posts, success: true});
+        return res.status(200).json({message: "All posts",data:posts, success: true});
     }catch(err){
         return res.status(400).json({message: "Failed to fetch : "+err, success: false});
     }
